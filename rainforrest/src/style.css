@@ -10,3 +10,80 @@ html {
   list-style: none;
 
 }
+
+
+.logo{
+
+  color: #000;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Bebas Neue", serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-style:oblique;
+  text-decoration:  none;
+  text-align: end;
+
+} 
+    
+    
+
+
+
+i{
+  font-size: 17px;
+  padding: 7px;
+  color:#000;
+}
+
+
+
+header{
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  padding: 20px 7%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar a {
+  margin: 0 35px;
+  font-size: 20px;
+  color: #fff;
+  transition: all .6s ease;
+  font-weight: 600;
+  font-family: "Bebas Neue", serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-style:normal;
+  text-decoration: none;
+
+
+
+}
+
+.navbar a:hover{
+  color: #376886;
+}
+
+
+
+
+
+.right-content{
+  display: flex;
+  align-items: center;
+}
+
+
+body{
+  background-image: url(../src/assets/bg2.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
