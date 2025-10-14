@@ -1,0 +1,31 @@
+.quizContainer{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.startContainer{
+    width: auto;
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.questionContainer{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.anwser{
+    background-color: #f0f8ff;
+    padding: 10px 10px;
+    margin: 20px 10px;
+    text-align: center;
+}
+
+.none{
+    display: none;
+}
+
+.selected {
+    background-color: #919497;
+}
