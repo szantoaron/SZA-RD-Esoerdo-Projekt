@@ -453,7 +453,7 @@ nav {
         }
 
         .home-info h1 {
-            font-size: 30px; 
+            font-size: 50px; 
         }
 
         .home-info p {
@@ -462,9 +462,19 @@ nav {
 
     }
 
-    img {
-        max-width: 100%; 
-        height: auto;
+
+    .tartalom button{
+            width: 120px;
+            font-size: 15px;
+            letter-spacing: 1px;
+    }
+
+    .home-icons i{
+
+        font-size: 20px;
+        width: 40px;
+        border-radius: 200px;
+        margin: 3px;
     }
 
 
@@ -491,6 +501,7 @@ nav {
     .footer-section {
         flex: 1;
         min-width: 200px;
+        
     }
 
     .footer-section h3 {
@@ -506,6 +517,7 @@ nav {
     .footer-section ul {
         list-style: none;
         padding: 0;
+        text-align: center;
         
     }
 
@@ -518,6 +530,8 @@ nav {
         font-weight: 300;
         font-family: "Bebas Neue", serif;
         letter-spacing: 1px;
+
+
     }
 
     .footer-section ul li i {
@@ -529,7 +543,7 @@ nav {
         color: #fff;
         text-decoration: none;
         transition: color 0.3s ease;
-    }
+        }
 
     .footer-section ul li a:hover {
         color: #EB5B38;
