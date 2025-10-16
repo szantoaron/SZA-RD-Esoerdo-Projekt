@@ -188,15 +188,29 @@
 
 
  <script>
-      const header = document.getElementById('header');
+      
+    const header = document.getElementById('header');
 
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 80) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+    let ticking = false;
+    let lastScrollY = 0;
+
+    function updateHeader() {
+        if (lastScrollY > 90) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+        lastScrollY = window.scrollY;
+        
+        if (!ticking) {
+            window.requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    }, { passive: true });
 </script>
 
 </body>
