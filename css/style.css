@@ -160,7 +160,7 @@ nav {
 
 
     .home-info {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0,0,0,0.2)), url(../kepek/bg-transformed.jpeg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0,0,0,0.2)), url(../kepek/background.webp);
         border-radius: 40px;
         display: flex;
         justify-content: center; 
