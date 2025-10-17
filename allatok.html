@@ -66,4 +66,74 @@
     </section>
 
 
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Kapcsolat</h3>
+            <ul>
+                <li><i class="fas fa-user"></i> Szántó Áron, Roncsek Dávid</li>
+                <li><i class="fas fa-phone"></i> +36 30 123 4567</li>
+                <li><i class="fas fa-map-marker-alt"></i> Héreg, Magyarország</li>
+                <li><i class="fas fa-envelope"></i> info@sza-rd-esoerdo.hu</li>
+            </ul>
+        </div>
+
+      
+        <div class="footer-section">
+            <h3>Kövess minket</h3>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+    
+        <div class="footer-section">
+            <h3>Hasznos linkek</h3>
+            <ul>
+               <li><a href="index.html">Főoldal</a></li>
+                <li><a href="#elovilag">Élővilág</a></li>
+                <li><a href="#kviz">Kvíz</a></li>
+                <li><a href="#tippek">Tippek</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Esőerdő projekt. Minden jog fenntartva.</p>
+    </div>
+</footer>
+
+
+<script>
+      
+    const header = document.getElementById('header');
+
+    let ticking = false;
+    let lastScrollY = 0;
+
+    function updateHeader() {
+        if (lastScrollY > 90) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+        lastScrollY = window.scrollY;
+        
+        if (!ticking) {
+            window.requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    }, { passive: true });
+</script>
+
 </body>
+</html>
