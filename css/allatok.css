@@ -180,3 +180,109 @@ nav {
      font-size: 24px;
      letter-spacing: 2px;
  }
+
+
+ .hero-animals {
+            background: linear-gradient(135deg, #2d5016 0%, #3d240f 100%);
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-radius: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+ 
+        .hero-animals::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.3) 100%);
+            z-index: 1;
+        }
+
+        .animal-icons-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            user-select: none;
+
+        }
+
+        .floating-icon {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.15);
+            font-size: 60px;
+        }
+
+        .floating-icon:nth-child(1) { top: 10%; left: 5%;}
+        .floating-icon:nth-child(2) { top: 20%; left: 85%;}
+        .floating-icon:nth-child(3) { top: 70%; left: 10%;}
+        .floating-icon:nth-child(4) { top: 15%; left: 50%;}
+        .floating-icon:nth-child(5) { top: 60%; left: 75%;}
+        .floating-icon:nth-child(6) { top: 80%; left: 45%;}
+        .floating-icon:nth-child(7) { top: 40%; left: 20%;}
+        .floating-icon:nth-child(8) { top: 50%; left: 90%;}
+        .floating-icon:nth-child(9) { top: 25%; left: 70%;}
+        .floating-icon:nth-child(10) { top: 75%; left: 60%;}
+        .floating-icon:nth-child(11) { top: 35%; left: 35%;}
+        .floating-icon:nth-child(12) { top: 85%; left: 25%;}
+
+
+
+.alcim {
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 800;
+            color: #EB5B38;
+            margin-left: 3%;
+            margin-top: 80px;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+}
+
+
+
+ .filter-section {
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+.filter-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+.filter-btn {
+            padding: 12px 30px;
+            background-color: #fff;
+            color: #EB5B38;
+            border: 2px solid #EB5B38;
+            border-radius: 30px;
+            font-family: "Bebas Neue", serif;
+            font-size: 18px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+.filter-btn:hover, .filter-btn.active {
+            background-color: #EB5B38;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(235, 91, 56, 0.3);
+}
+
+

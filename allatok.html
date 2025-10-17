@@ -9,19 +9,20 @@
 </head>
 
 <body>
-    <header>
+   <header>
         <nav>
-            <div class="nav-container">
+            <div class="nav-container" id="header">
                 <div class="navbar">
                     <a href="#" class="logo">LOGO</a>
                     <ul class="main-menu">
-                        <li><a href="#" class="nav-link">Rólunk</a></li>
-                        <li><a href="#" class="nav-link">Állatok</a></li>
+                         <li><a href="index.html" class="nav-link">Főoldal</a></li>
+                        <li><a href="allatok.html" class="nav-link">Állatok</a></li>
                         <li><a href="#" class="nav-link">Növények</a></li>
                         <li><a href="#" class="nav-link">Kvíz</a></li>
+
                     </ul>
-                    <a href="#" class="btn">Cselekedj!</a>
-                </div>
+                    <a href="#tippek" class="btn">Cselekedj!</a>
+                </div>  
             </div>
         </nav>
     </header>
@@ -29,11 +30,40 @@
 
 
     <section class="hero-animals">
+         <div class="animal-icons-bg">
+            <div class="floating-icon">🐆</div>
+            <div class="floating-icon">🦜</div>
+            <div class="floating-icon">🐸</div>
+            <div class="floating-icon">🦥</div>
+            <div class="floating-icon">🐍</div>
+            <div class="floating-icon">🐱</div>
+            <div class="floating-icon">🐸</div>
+            <div class="floating-icon">🦅</div>
+            <div class="floating-icon">🦎</div>
+            <div class="floating-icon">🐻</div>
+        </div>
         <div class="hero-content">
             <h1>Az Esőerdő Állatai</h1>
             <p>Fedezd fel a trópusok lenyűgöző élővilágát</p>
         </div>
     </section>
 
-    
+    <div class="alcim">
+        <h2>01 Állatok - Szűrés kategória szerint</h2>
+    </div>
+
+
+
+
+    <section class="filter-section">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Összes</button>
+            <button class="filter-btn" data-filter="mammal">Emlősök</button>
+            <button class="filter-btn" data-filter="bird">Madarak</button>
+            <button class="filter-btn" data-filter="reptile">Hüllők</button>
+            <button class="filter-btn" data-filter="amphibian">Kétéltűek</button>
+        </div>
+    </section>
+
+
 </body>
