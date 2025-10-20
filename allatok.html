@@ -53,8 +53,6 @@
     </div>
 
 
-
-
     <section class="filter-section">
         <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">Összes</button>
@@ -64,6 +62,21 @@
             <button class="filter-btn" data-filter="amphibian">Kétéltűek</button>
         </div>
     </section>
+
+
+
+        <div class="animals-container">
+        <div class="animals-grid" id="animalsGrid"></div>
+    </div>
+
+    <div id="animalModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header" id="modalHeader">
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
 
 
 
@@ -134,6 +147,7 @@
         }
     }, { passive: true });
 </script>
-
+<script src="./js/allatAdatok.js"></script>
+<script src="./js/card.js"></script>
 </body>
 </html>
