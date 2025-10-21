@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+
+
+
+html {
+
+      scroll-behavior: smooth;
+        scroll-padding-top: 60px;
+    }
+
+*{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+}
+
+
 .quizContainer{
     width: 1000px;
     margin: 0 auto;

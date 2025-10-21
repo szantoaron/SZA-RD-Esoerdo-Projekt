@@ -293,6 +293,7 @@ nav {
     #nGomb:hover{
     background-color: #fff;
         color: #EB5B38;
+         transform: translateY(-2.5px);
       
     }
 
@@ -303,6 +304,7 @@ nav {
     .tartalom button:hover{
         background-color: #EB5B38;
         color: #EDF4F2;
+         transform: translateY(-2.5px);
         
     
     }
