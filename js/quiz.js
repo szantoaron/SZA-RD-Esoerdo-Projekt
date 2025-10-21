@@ -78,15 +78,7 @@ const quizQuestions = [
     }
   });
 
-  restartBtn.addEventListener("click", () => {
-    resultContainer.classList.add("none");
-    questionContainer.classList.remove("none");
-    points = 0;
-    index = 0;
-    score.textContent = points + " pont";
-    shuffle(quizQuestions);
-    play();
-  });
+  
 
   function play() {
     answered = false;
