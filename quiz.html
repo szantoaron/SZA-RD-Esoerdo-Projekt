@@ -39,7 +39,10 @@
 
 
     <section class="quizContainer">
-        <h2 class="text-center">Esőerdő quiz</h2>
+        <h2 class="text-center"> <i class="fa-regular fa-circle-question"></i> Esőerdő quiz</h2>
+        <div class="quiz-slogen">
+          <h3 class="text-center">Merülj el az esőerdő mélyén, és teszteld a tudásod!</h3>
+        </div>
         <div class="startContainer">
             <button class="startBtn">Indítás</button>
         </div>
@@ -51,13 +54,15 @@
                 <div class="anwser"><p></p></div>
                 <div class="anwser"><p></p></div>
             </div>
-            <button class="nextBtn">Következő</button>
+            <div class="gomb">
+              <button class="nextBtn">Következő</button>
+            </div>
         </div>
-        <p class="score"> Pontszám: 10/0</p>
+        <p class="score"></p>
 
         <div class="resultContainer">
-            <p class="result">5 pont</p>
-            <p class="message">Ügyes vagy</p>
+            <p class="result"></p>
+            <p class="message">Sok Sikert!</p>
         
         </div>
     </section>
@@ -71,7 +76,23 @@
             <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Bezárás"></button>
           </div>
         </div>
+
+         <div id="errorToast" class="toast align-items-center text-bg-danger border-0 mt-2" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="d-flex">
+                <div class="toast-body">
+                  Rossz válasz 😔
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Bezárás"></button>
+              </div>
+            </div>
+         </div>
+
+
+
       </div>
+
+
+   
 
 
 

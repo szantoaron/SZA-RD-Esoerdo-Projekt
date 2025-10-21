@@ -26,8 +26,11 @@ const quizQuestions = [
   let index = 0;
   let answered = false;
 
-  const toastElement = document.getElementById('successToast');
-  const toast = new bootstrap.Toast(toastElement);
+  const toastSuccessElement = document.getElementById('successToast');
+  const toastErrorElement = document.getElementById('errorToast');
+  const toastSuccess = new bootstrap.Toast(toastSuccessElement);
+  const toastError = new bootstrap.Toast(toastErrorElement);
+
 
   startBtn.addEventListener("click", () => {
     shuffle(quizQuestions);
@@ -41,24 +44,26 @@ const quizQuestions = [
   });
 
   anwsers.forEach((anwser, i) => {
-    anwser.addEventListener("click", () => {
-      if (answered) return; 
-      answered = true;
+  anwser.addEventListener("click", () => {
+    if (answered) return; 
+    answered = true;
 
-      anwsers.forEach(a => a.classList.remove("selected", "correct", "wrong"));
-      anwser.classList.add("selected");
+    anwsers.forEach(a => a.classList.remove("selected", "correct", "wrong"));
+    anwser.classList.add("selected");
 
-      if (i === quizQuestions[index].correctIndex) {
-        points++;
-        score.textContent = points + " pont";
-        anwser.classList.add("correct");
-        toast.show(); 
-      } else {
-        anwser.classList.add("wrong");
-        anwsers[quizQuestions[index].correctIndex].classList.add("correct");
-      }
+    if (i === quizQuestions[index].correctIndex) {
+      points++;
+      score.textContent = points + " pont";
+      anwser.classList.add("correct");
+      toastSuccess.show(); 
+    } else {
+      anwser.classList.add("wrong");
+      anwsers[quizQuestions[index].correctIndex].classList.add("correct");
+      toastError.show(); 
+    }
     });
   });
+
 
   nextBtn.addEventListener("click", () => {
     if (!answered) {
