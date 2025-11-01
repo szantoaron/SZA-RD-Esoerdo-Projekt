@@ -16,24 +16,33 @@
 
 <body>
 
-    <header>
+   <header>
         <nav>
             <div class="nav-container" id="header">
                 <div class="navbar">
-                    <a href="#" class="logo"><img src="/kepek/logo.png" class="logo" alt="logo"></a>
-                    <ul class="main-menu">
-                         <li><a href="index.html" class="nav-link">Főoldal</a></li>
+                    <a href="index.html" class="logo">
+                        <img src="./kepek/logo.png" class="logo" alt="logo">
+                    </a>
+                    
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <ul class="main-menu" id="mainMenu">
+                        <li><a href="index.html" class="nav-link">Főoldal</a></li>
                         <li><a href="elovilag.html" class="nav-link">Élővilág</a></li>
                         <li><a href="terkep.html" class="nav-link">Térkép</a></li>
+                        <li><a href="veszelyek.html" class="nav-link">Veszélyek</a></li>
                         <li><a href="quiz.html" class="nav-link">Kvíz</a></li>
-
+                        <li class="mobile-only"><a href="index.html#tippek">Cselekedj!</a></li>
                     </ul>
-                    <a href="index.html#tippek" class="btn">Cselekedj!</a>
+                    <a href="index.html#tippek" class="btn desktop-only">Cselekedj!</a>
                 </div>  
             </div>
         </nav>
     </header>
-
 
 
 
@@ -48,8 +57,8 @@
                 <p>Az élet zöld otthona</p>
 
                 <div class="gomb-rendez">
-                    <a href="#ide1"><button id="nGomb"> Irány az oldal</button></a>
-                    <a href="#ide1"><button>Rólunk</button></a>
+                    <a href="#rolunk" class="gomb" id="nGomb">Irány az oldal</a>
+                    <a href="#elerhetoseg" class="gomb">Rólunk</a>
                 </div>
 
                <div class="home-icons">
@@ -62,7 +71,7 @@
                
             </div>
         </div>
-
+<main>
         <section id="rolunk">
             <div class="alcim">
                 <h2>01 Rólunk - Az esőerdők világa</h2>
@@ -93,7 +102,7 @@
             </div>
         </section>
 
-
+</main>
 
 <section id="tippek">
             <div class="alcim">
@@ -146,7 +155,7 @@
 
 
 <footer>
-            <div class="footer-container">
+            <div class="footer-container" id="elerhetoseg">
                 <div class="footer-section">
                     <h3>Kapcsolat</h3>
                     <ul>
@@ -173,9 +182,9 @@
                     <h3>Hasznos linkek</h3>
                     <ul>
                        <li><a href="index.html">Főoldal</a></li>
-                        <li><a href="#elovilag">Élővilág</a></li>
+                        <li><a href="elovilag.html">Élővilág</a></li>
                         <li><a href="quiz.html">Kvíz</a></li>
-                        <li><a href="#tippek">Tippek</a></li>
+                        <li><a href="index.html#tippek">Tippek</a></li>
                     </ul>
                 </div>
             </div>
@@ -187,31 +196,6 @@
 </footer>
 
 
- <script>
-      
-    const header = document.getElementById('header');
-
-    let ticking = false;
-    let lastScrollY = 0;
-
-    function updateHeader() {
-        if (lastScrollY > 90) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-        ticking = false;
-    }
-
-    window.addEventListener('scroll', function() {
-        lastScrollY = window.scrollY;
-        
-        if (!ticking) {
-            window.requestAnimationFrame(updateHeader);
-            ticking = true;
-        }
-    }, { passive: true });
-</script>
-
+<script src="./js/main.js"></script>
 </body>
 </html>

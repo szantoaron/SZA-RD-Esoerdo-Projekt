@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Világ esőerdei — Térkép</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,102 +12,108 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous">
-    
-
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-        <link rel="stylesheet" href="css/terkep.css">
-        <script src="js/main.js" defer></script>
+        <link rel="stylesheet" href="./css/terkep.css">
+        
 
 </head>
 
 <body>
     <header>
-  <nav>
-    <div class="nav-container" id="header">
-      <div class="navbar">
-        <a href="#" class="logo">
-          <img src="/kepek/logo.png" class="logo" alt="logo">
-        </a>
+        <nav>
+            <div class="nav-container" id="header">
+                <div class="navbar">
+                    <a href="index.html" class="logo">
+                        <img src="./kepek/logo.png" class="logo" alt="logo">
+                    </a>
+                    
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+                    <ul class="main-menu" id="mainMenu">
+                        <li><a href="index.html" class="nav-link">Főoldal</a></li>
+                        <li><a href="elovilag.html" class="nav-link">Élővilág</a></li>
+                        <li><a href="terkep.html" class="nav-link">Térkép</a></li>
+                        <li><a href="veszelyek.html" class="nav-link">Veszélyek</a></li>
+                        <li><a href="quiz.html" class="nav-link">Kvíz</a></li>
+                        <li class="mobile-only"><a href="index.html#tippek">Cselekedj!</a></li>
+                    </ul>
+                    <a href="index.html#tippek" class="btn desktop-only">Cselekedj!</a>
+                </div>  
+            </div>
+        </nav>
+    </header>
+   <main class="map-wrapper">
+        <div class="map-header">
+            <h1>Világ Esőerdei</h1>
+            <p>Fedezd fel a Föld legértékesebb ökoszisztémáit</p>
         </div>
 
-        <ul class="main-menu" id="mainMenu">
-          <li><a href="index.html" class="nav-link">Főoldal</a></li>
-          <li><a href="elovilag.html" class="nav-link">Élővilág</a></li>
-          <li><a href="terkep.html" class="nav-link">Térkép</a></li>
-          <li><a href="quiz.html" class="nav-link">Kvíz</a></li>
-          <li><a href="index.html#tippek" class="btn">Cselekedj!</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+        <div class="filter-controls">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-region="all">Összes</button>
+                <button class="filter-btn" data-region="south-america">Dél-Amerika</button>
+                <button class="filter-btn" data-region="africa">Afrika</button>
+                <button class="filter-btn" data-region="asia">Ázsia</button>
+                <button class="filter-btn" data-region="australia">Ausztrália</button>
+                <span class="stats-box" id="stats">9 esőerdő megjelenítve</span>
+            </div>
+        </div>
 
-    <main class="home-info">
-        <div id="map" aria-label="Térkép: világ esőerdei"></div>
+        <div class="map-container">
+            <div id="map" role="region" aria-label="Térkép: világ esőerdei"></div>
+        </div>
     </main>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script>
-        const map = L.map('map', { zoomControl: true }).setView([0, 20], 2);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '© OpenStreetMap'
-        }).addTo(map);
+<footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Kapcsolat</h3>
+                    <ul>
+                        <li><i class="fas fa-user"></i> Szántó Áron, Roncsek Dávid</li>
+                        <li><i class="fas fa-phone"></i> +36 30 123 4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Héreg, Magyarország</li>
+                        <li><i class="fas fa-envelope"></i> info@sza-rd-esoerdo.hu</li>
+                    </ul>
+                </div>
+        
+      
+                <div class="footer-section">
+                    <h3>Kövess minket</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+        
+            
+                <div class="footer-section">
+                    <h3>Hasznos linkek</h3>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="elovilag.html">Élővilág</a></li>
+                        <li><a href="quiz.html">Kvíz</a></li>
+                        <li><a href="index.html#tippek">Tippek</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+        
+            <div class="footer-bottom">
+                <p>&copy; 2025 Esőerdő projekt. Minden jog fenntartva.</p>
+            </div>
+</footer>
 
-        const RainforestIcon = L.DivIcon.extend({
-            options: {
-                className: 'custom-rf-icon',
-                html: `<div style="width:22px;height:22px;border-radius:50%;background:#EB5B38;border:3px solid white;box-shadow:0 3px 8px rgba(0,0,0,0.4)"></div>`,
-                iconSize: [28, 28],
-                iconAnchor: [14, 14]
-            }
-        });
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="js/terkep.js"></script>
 
-        const rfIcon = new RainforestIcon();
-
-        const rainforests = [
-            { id: 'amazon', name: 'Amazonas (Dél-Amerika)', coords: [-3.4653, -62.2159], summary: 'A világ legnagyobb trópusi esőerdeje, a biodiverzitás központja. Több ezer növény- és állatfaj otthona, létfontosságú a globális klímára.' },
-            { id: 'congo', name: 'Kongó-medence (Közép-Afrika)', coords: [0.3476, 15.1830], summary: 'Afrika második legnagyobb esőerdeje. Fontos ökológiai szereplő, sok endemikus fajjal és hagyományos közösségekkel.' },
-            { id: 'borneo', name: 'Borneo (Délkelet-Ázsia)', coords: [1.5, 114.0], summary: 'Borneo őserdői kiemelkedő helyet foglalnak el az orangutánok és más ritka fajok fennmaradásában, de erős az erdőirtás nyomása.' },
-            { id: 'sumatra', name: 'Szumátra (Délkelet-Ázsia)', coords: [0.5897, 101.3431], summary: 'Gazdag biodiverzitás, sok ritka fajjal (pl. sumátrai tigris). Az élőhelyek csökkenése miatt veszélyeztetett.' },
-            { id: 'newguinea', name: 'Új-Guinea', coords: [-5.0, 143.5], summary: 'Ázsia és Ausztrália között fekvő sziget, hatalmas, részben érintetlen esőerdőkkel és rengeteg endemitással.' },
-            { id: 'mata_atlantica', name: 'Mata Atlântica (Atlantikus erdő, Délkelet-Brazília)', coords: [-23.0, -46.6], summary: 'Az Atlanti-óceán partvidékének erdeje: rendkívül biodiverz és erősen degradálódott — az eredeti erdők töredéke maradt.' },
-            { id: 'central_america', name: 'Közép-Amerika esőerdei', coords: [10.0, -84.0], summary: 'Costa Rica, Panama és környékének trópusi erdei híresek fajgazdagságukról és ökoturizmusukról.' },
-            { id: 'madagascar', name: 'Madagaszkár erdői', coords: [-18.5, 46.9], summary: 'Sok egyedi faj származik innen (lemurok stb.). Az erdőirtás súlyosan fenyegeti a sziget ökoszisztémáját.' },
-            { id: 'daintree', name: 'Daintree (Ausztrália)', coords: [-16.16, 145.42], summary: 'Az egyik legrégebbi trópusi esőerdő a világon, különleges növény- és állatvilággal.' }
-        ];
-
-        const markers = {};
-        rainforests.forEach(rf => {
-            const marker = L.marker(rf.coords, { icon: rfIcon }).addTo(map);
-            const popupHtml = `
-        <div>
-          <h3>${rf.name}</h3>
-          <p>${rf.summary}</p>
-          <p style="margin-top:8px;font-size:13px;color:#333"><strong>Koordináta:</strong> ${rf.coords[0].toFixed(4)}, ${rf.coords[1].toFixed(4)}</p>
-          <p style="margin-top:8px"><a href="https://www.google.com/search?q=${encodeURIComponent(rf.name)}" target="_blank">További információ</a></p>
-        </div>
-      `;
-            marker.bindPopup(popupHtml, { maxWidth: 300 });
-            markers[rf.id] = marker;
-        });
-
-        const overlays = {};
-        Object.keys(markers).forEach(key => overlays[rainforests.find(r => r.id === key).name] = markers[key]);
-        L.control.layers(null, overlays, { collapsed: false, position: 'topright' }).addTo(map);
-
-        function resetView() { map.setView([0, 20], 2); }
-
-        map.on('popupopen', function (e) { const latlng = e.popup._latlng; map.panTo(latlng, { animate: true }); });
-    </script>
 </body>
 
 </html>
