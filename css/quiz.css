@@ -319,7 +319,7 @@ h2{
         font-style: italic;
         font-size: 20px;
         color: #EB5B38;
-
+        text-align: center;
 
 }
 
@@ -327,12 +327,7 @@ i{
     color: #EB5B38;
 }
 
-.quiz-slogen{
-    background-color: #fff;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-    width: 500px;
-    margin: 0 auto;
-}
+
 
 
 
@@ -611,5 +606,9 @@ footer {
 
         .social-icons {
             justify-content: center;
+        }
+        .quizContainer{
+            margin-left: 20px;
+            margin-right: 20px;
         }
     }
