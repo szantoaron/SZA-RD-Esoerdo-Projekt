@@ -328,10 +328,6 @@ i{
 }
 
 
-
-
-
-
 @keyframes slideInDown {
        from {
            opacity: 0;
@@ -610,5 +606,8 @@ footer {
         .quizContainer{
             margin-left: 20px;
             margin-right: 20px;
+        }
+        .anwser{
+            width: 300px;
         }
     }
